@@ -79,9 +79,9 @@ miniMaxSum(arr)
 
 #6-1
 AC = {"a", "an", "the", "for", "and", "nor", "but", "or", "yet", "because", "although", "since", "unless", "while", "where"}
-a= str(input())
+a= input()
 a = a.lower()
-# a = a.strip("\n")
+a = a.replace("\\n", " ")
 a = a.split()
 print(a)
 word = len(a)
@@ -119,6 +119,60 @@ else :
   print("Pass")
 
 #6-2
+AC = {"a", "an", "the", "for", "and", "nor", "but", "or", "yet", "because", "although", "since", "unless", "while", "where"}
+a = input("A")
+b = input("B")
+a = a.lower()
+a = a.replace("\\n", " ")
+a = a.split()
+b = b.lower()
+b = b.replace("\\n", " ")
+b = b.split()
+sa = []
+sb = []
+overlap = 0
+#print(a)
+#print(b)
+for i in a:
+  # print(i)
+  if i[-1] =="?" or i[-1] =="!" :
+    a.remove(i)
+  i = i.strip("?")
+  i = i.strip("!")
+  i = i.strip(".")
+  i = i.strip(",")
+  # print(i)
+  if i not in AC:
+   sa.append(i)
+
+sa = list(set(sa))
+
+for i in b:
+  # print(i)
+  if i[-1] =="?" or i[-1] =="!" :
+    b.remove(i)
+  i = i.strip("?")
+  i = i.strip("!")
+  i = i.strip(".")
+  i = i.strip(",")
+  # print(i)
+  if i not in AC:
+   sb.append(i)
+
+sb = set(sb)
+print(sa)
+print(sb)
+
+for k in sa:
+  if k in sb:
+    overlap +=1
+proportion = (overlap/len(sa))*100
+print("Simillarity : ", proportion)
+if proportion >40:
+  print("See you never again")
+else :
+  print("Pass")
+
 
 
 #7
