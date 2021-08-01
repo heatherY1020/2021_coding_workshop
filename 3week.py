@@ -79,7 +79,7 @@ miniMaxSum(arr)
 
 #6-1
 AC = {"a", "an", "the", "for", "and", "nor", "but", "or", "yet", "because", "although", "since", "unless", "while", "where"}
-a= input()
+a= str(input())
 a = a.lower()
 # a = a.strip("\n")
 a = a.split()
