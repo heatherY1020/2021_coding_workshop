@@ -78,6 +78,47 @@ def miniMaxSum(arr):
 miniMaxSum(arr)
 
 #6-1
+AC = {"a", "an", "the", "for", "and", "nor", "but", "or", "yet", "because", "although", "since", "unless", "while", "where"}
+a= input()
+a = a.lower()
+# a = a.strip("\n")
+a = a.split()
+print(a)
+word = len(a)
+total_length = 0
+interjection = 0
+article_conjuction = 0
+for i in a:
+  if i[-1] =="!" or i[-1]=="?":
+    interjection +=1
+  i = i.strip(",")
+  i = i.strip(".")
+  i = i.strip("!")
+  i = i.strip("?")
+  i = i.replace("'","")
+  i = i.strip()
+  # print(i)
+  total_length += len(i)
+  if i in AC:
+    # print(i)
+    article_conjuction += 1
+
+meaningless = article_conjuction + interjection
+
+print("word : ", word)
+print("character : ", total_length)
+print("meaningless : ", meaningless)
+
+proportion = 100*(meaningless/word)
+print("proportion : ", proportion)
+if total_length < 200:
+  print("See you next year")
+elif proportion >10 : 
+  print("See you next year")
+else :
+  print("Pass")
+
+#6-2
 
 
 #7
