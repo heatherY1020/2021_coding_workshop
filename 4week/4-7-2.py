@@ -86,7 +86,7 @@ def status_dictionary(grid):
     for col in range(5):
       surround = []
       if grid[row][col] =='2':
-        surr_index = [(row-1, col-1), (row-1, col), (row-1, col+1), (row, col-1), (row, col), (row, col+1), (row+1, col-1), (row+1, col), (row+1, col+1)]
+        surr_index = [(row-1, col-1), (row-1, col), (row-1, col+1), (row, col-1), (row, col+1), (row+1, col-1), (row+1, col), (row+1, col+1)]
         for (a, b) in surr_index:
           if a>=0 and a<=4 and b>=0 and b<=4 :
             surround.append(grid[a][b])
