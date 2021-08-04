@@ -60,3 +60,4 @@ if len(avoid_losing) == 0:
 else:
     for i in avoid_losing:
         print(i)
+
