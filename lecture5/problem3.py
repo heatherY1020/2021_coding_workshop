@@ -1,0 +1,6 @@
+a = str(input())
+print(any(q.isalnum() for q in a))
+print(any(q.isalpha() for q in a))
+print(any(q.isdigit() for q in a))
+print(any(q.islower() for q in a))
+print(any(q.isupper() for q in a))
